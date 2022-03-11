@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="search">Trouver</string>
+    <string name="add">Ajouter</string>
+    <string name="Titulo">Boutique</string>
+    <string name="Volver">Rendre</string>
+    <string name="Nombre">Nom:</string>
+    <string name="Descripcion">Description:</string>
+    <string name="Stock">Stock:</string>
+    <string name="Precio">Prix:</string>
+    <string name="Precio_Descuento">Rabais:</string>
+    <string name="Disponibilidad">Disponibilité:</string>
+    <string name="Imagen">Image:</string>
+    <string name="mensaje1">DERNIÈRE UNITÉ!!!</string>
+    <string name="mensaje2">DERNIÈRES UNITÉS!!!</string>
+    <string name="Lista">Liste</string>
+    <string name="Fav">Favoris</string>
+    <string name="Borrar">Effacer</string>
+</resources>

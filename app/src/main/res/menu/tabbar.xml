@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/productListFragment"
+        android:icon="@drawable/list"
+        android:title="@string/Lista" />
+    <item
+        android:id="@+id/favProduct"
+        android:icon="@drawable/fav"
+        android:title="@string/Fav" />
+</menu>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/productListFragment">
+
+    <fragment
+        android:id="@+id/productListFragment"
+        android:name="com.api.Peliculas.ui.view.ProductListFragment"
+        android:label="fragment_product_list"
+        tools:layout="@layout/product_list" >
+        <action
+            android:id="@+id/action_productListFragment_to_productDetailFragment"
+            app:destination="@id/productDetailFragment" />
+        <action
+            android:id="@+id/action_productListFragment_to_productAddFragment"
+            app:destination="@id/productAddFragment" />
+        <action
+            android:id="@+id/action_productListFragment_to_favProduct"
+            app:destination="@id/favProduct" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/favProduct"
+        android:name="com.api.Peliculas.ui.view.ProductFavFragment"
+        android:label="fragment_product_list"
+        tools:layout="@layout/product_list" >
+
+        <action
+            android:id="@+id/action_favProduct_to_productListFragment"
+            app:destination="@id/productListFragment" />
+        <action
+            android:id="@+id/action_favProduct_to_productDetailFragment"
+            app:destination="@id/productDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/productDetailFragment"
+        android:name="com.api.Peliculas.ui.view.ProductDetailFragment"
+        android:label="fragment_product_detail"
+        tools:layout="@layout/product_detail" >
+
+        <argument
+            android:name="stock"
+            app:argType="string" />
+        <argument
+            android:name="desc"
+            app:argType="string" />
+        <argument
+            android:name="myId"
+            app:argType="string" />
+        <argument
+            android:name="name"
+            app:argType="string"
+            android:defaultValue="Nombre" />
+        <argument
+            android:name="price"
+            app:argType="float" />
+        <argument
+            android:name="discountPrice"
+            app:argType="float" />
+        <argument
+            android:name="available"
+            app:argType="boolean" />
+        <argument
+            android:name="imageURL"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_productDetailFragment_to_productListFragment2"
+            app:destination="@id/productListFragment" />
+
+
+    </fragment>
+    <action
+        android:id="@+id/action_productDetailFragment_to_productListFragment"
+        app:destination="@id/productListFragment" />
+    <fragment
+        android:id="@+id/productAddFragment"
+        android:name="com.api.Peliculas.ui.view.ProductAddFragment"
+        android:label="fragment_product_add"
+        tools:layout="@layout/product_add" >
+        <action
+            android:id="@+id/action_productAddFragment_to_productListFragment"
+            app:destination="@id/productListFragment" />
+    </fragment>
+</navigation>

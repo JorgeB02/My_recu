@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#E91E63"
+    tools:context=".ui.view.ProductDetailFragment">
+
+    <TextView
+        android:id="@+id/tvPrecioDes"
+        android:layout_width="183dp"
+        android:layout_height="48dp"
+        android:fontFamily="@font/aladin2"
+        android:gravity="center"
+        android:text="Descuento"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/tvPrice"
+        app:layout_constraintTop_toTopOf="@+id/lblDescuento4" />
+
+    <TextView
+        android:id="@+id/tvDisp"
+        android:layout_width="183dp"
+        android:layout_height="48dp"
+        android:fontFamily="@font/aladin2"
+        android:gravity="center"
+        android:text="Disponibilidad"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/tvPrecioDes"
+        app:layout_constraintTop_toTopOf="@+id/lblAvailable4" />
+
+    <TextView
+        android:id="@+id/lblDescuento4"
+        android:layout_width="183dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/aladin2"
+        android:gravity="center"
+        android:text="@string/Precio_Descuento"
+        android:textAlignment="textStart"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/lblPrice"
+        app:layout_constraintTop_toBottomOf="@+id/lblPrice" />
+
+    <TextView
+        android:id="@+id/lblAvailable4"
+        android:layout_width="183dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/aladin2"
+        android:gravity="center"
+        android:text="@string/Disponibilidad"
+        android:textAlignment="textStart"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/lblDescuento4"
+        app:layout_constraintTop_toBottomOf="@+id/lblDescuento4" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="183dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:fontFamily="@font/aladin2"
+        android:gravity="center"
+        android:text="Nombre"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/lblName"
+        app:layout_constraintTop_toTopOf="@+id/lblName" />
+
+    <TextView
+        android:id="@+id/tvDesc"
+        android:layout_width="183dp"
+        android:layout_height="48dp"
+        android:fontFamily="@font/aladin2"
+        android:gravity="center"
+        android:text="Descripción"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/tvName"
+        app:layout_constraintTop_toTopOf="@+id/lblDesc" />
+
+    <TextView
+        android:id="@+id/lblPrice"
+        android:layout_width="183dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/aladin2"
+        android:gravity="center"
+        android:text="@string/Precio"
+        android:textAlignment="textStart"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/lblCategory"
+        app:layout_constraintTop_toBottomOf="@+id/lblCategory" />
+
+    <TextView
+        android:id="@+id/lblCategory"
+        android:layout_width="183dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/aladin2"
+        android:gravity="center"
+        android:text="@string/Stock"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/lblDesc"
+        app:layout_constraintTop_toBottomOf="@+id/lblDesc" />
+
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="183dp"
+        android:layout_height="48dp"
+        android:fontFamily="@font/aladin2"
+        android:gravity="center"
+        android:text="Precio"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/tvStock"
+        app:layout_constraintTop_toTopOf="@+id/lblPrice" />
+
+    <TextView
+        android:id="@+id/tvStock"
+        android:layout_width="183dp"
+        android:layout_height="48dp"
+        android:fontFamily="@font/aladin2"
+        android:gravity="center"
+        android:text="Stock"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/tvDesc"
+        app:layout_constraintTop_toTopOf="@+id/lblCategory" />
+
+    <TextView
+        android:id="@+id/lblName"
+        android:layout_width="183dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/aladin2"
+        android:gravity="center"
+        android:text="@string/Nombre"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/lblDesc"
+        android:layout_width="183dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/aladin2"
+        android:gravity="center"
+        android:text="@string/Descripcion"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/lblName"
+        app:layout_constraintTop_toBottomOf="@+id/lblName" />
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="63dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="#00F1FAFF"
+        android:contentDescription="Borrar"
+        app:icon="@android:drawable/ic_menu_delete"
+        app:iconTint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.974"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="129dp"
+        android:layout_height="53dp"
+        android:backgroundTint="#0557FA"
+        android:fontFamily="@font/aladin2"
+        android:text="@string/Volver"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblAvailable4"
+        app:layout_constraintVertical_bias="0.294" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/btnfav"
+        android:layout_width="63dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="4dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="Fav"
+        app:icon="@android:drawable/ic_input_get"
+        app:iconTint="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnDelete" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

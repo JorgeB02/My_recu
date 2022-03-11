@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.view.ProductAddFragment" >
+
+    <TextView
+        android:id="@+id/lblName"
+        android:layout_width="183dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/aladin"
+        android:gravity="center"
+        android:text="@string/Nombre"
+        android:textAlignment="textStart"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lblDesc"
+        android:layout_width="183dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/aladin"
+        android:gravity="center"
+        android:text="@string/Descripcion"
+        android:textAlignment="textStart"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/lblName"
+        app:layout_constraintTop_toBottomOf="@+id/lblName" />
+
+    <TextView
+        android:id="@+id/lblCategory"
+        android:layout_width="183dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/aladin"
+        android:gravity="center"
+        android:text="@string/Stock"
+        android:textAlignment="textStart"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/lblDesc"
+        app:layout_constraintTop_toBottomOf="@+id/lblDesc" />
+
+    <TextView
+        android:id="@+id/lblPrice"
+        android:layout_width="183dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/aladin"
+        android:gravity="center"
+        android:text="@string/Precio"
+        android:textAlignment="textStart"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/lblCategory"
+        app:layout_constraintTop_toBottomOf="@+id/lblCategory" />
+
+    <TextView
+        android:id="@+id/lblDescuento"
+        android:layout_width="183dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/aladin"
+        android:gravity="center"
+        android:text="@string/Precio_Descuento"
+        android:textAlignment="textStart"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/lblPrice"
+        app:layout_constraintTop_toBottomOf="@+id/lblPrice" />
+
+    <TextView
+        android:id="@+id/lblAvailable"
+        android:layout_width="183dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/aladin"
+        android:gravity="center"
+        android:text="@string/Disponibilidad"
+        android:textAlignment="textStart"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/lblDescuento"
+        app:layout_constraintTop_toBottomOf="@+id/lblDescuento" />
+
+    <TextView
+        android:id="@+id/lblimage"
+        android:layout_width="183dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/aladin"
+        android:gravity="center"
+        android:text="@string/Imagen"
+        android:textAlignment="textStart"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/lblAvailable"
+        app:layout_constraintTop_toBottomOf="@+id/lblAvailable" />
+
+    <Button
+        android:id="@+id/btnAgregar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="#48EC1A"
+        android:fontFamily="@font/aladin"
+        android:text="@string/add"
+        app:iconTint="#E91E63"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etimage" />
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="129dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#0557FA"
+        android:fontFamily="@font/aladin"
+        android:text="@string/Volver"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAgregar" />
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="183dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:ems="10"
+        android:fontFamily="@font/aladin"
+        android:hint="Blusa"
+        android:inputType="textPersonName"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/lblName"
+        app:layout_constraintTop_toTopOf="@+id/lblName" />
+
+    <EditText
+        android:id="@+id/etDesc"
+        android:layout_width="183dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:fontFamily="@font/aladin"
+        android:hint="blablablablabla"
+        android:inputType="textPersonName"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/etName"
+        app:layout_constraintTop_toTopOf="@+id/lblDesc" />
+
+    <EditText
+        android:id="@+id/etStock"
+        android:layout_width="183dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:fontFamily="@font/aladin"
+        android:hint="ej: 6"
+        android:inputType="textPersonName"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/etDesc"
+        app:layout_constraintTop_toTopOf="@+id/lblCategory" />
+
+    <EditText
+        android:id="@+id/etPrice"
+        android:layout_width="183dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:fontFamily="@font/aladin"
+        android:hint="ej: 1.50"
+        android:inputType="textPersonName"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/etStock"
+        app:layout_constraintTop_toTopOf="@+id/lblPrice" />
+
+    <EditText
+        android:id="@+id/etDescuento"
+        android:layout_width="183dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:fontFamily="@font/aladin"
+        android:hint="ej: 1.50"
+        android:inputType="textPersonName"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/etPrice"
+        app:layout_constraintTop_toTopOf="@+id/lblDescuento" />
+
+    <EditText
+        android:id="@+id/etavailable"
+        android:layout_width="183dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:fontFamily="@font/aladin"
+        android:hint="true/false"
+        android:inputType="textPersonName"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/etDescuento"
+        app:layout_constraintTop_toTopOf="@+id/lblAvailable" />
+
+    <EditText
+        android:id="@+id/etimage"
+        android:layout_width="183dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:fontFamily="@font/aladin"
+        android:hint="http//hello..."
+        android:inputType="textPersonName"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/etavailable"
+        app:layout_constraintTop_toTopOf="@+id/lblimage" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
