@@ -31,6 +31,7 @@
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
         app:layout_constraintStart_toEndOf="@+id/ReloadData"
         app:layout_constraintTop_toTopOf="parent" />
 
