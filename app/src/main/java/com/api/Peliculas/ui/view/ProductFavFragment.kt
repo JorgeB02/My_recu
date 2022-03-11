@@ -56,7 +56,7 @@ class ProductFavFragment : Fragment() {
         val mCursor: MutableList<ProductObjectItem> = db.productDao().findProducts()
 
         if (mCursor.size == 0) {
-            binding.lblAviso.text = "Lista de favoritos vacía"
+            binding.lblAviso.text = "No añadio nada a favoritos"
             imageView3.setImageResource(R.drawable.circulorojo)
 
         } else {
