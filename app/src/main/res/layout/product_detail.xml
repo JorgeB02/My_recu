@@ -10,8 +10,7 @@
 
     <TextView
         android:id="@+id/tvPrecioDes"
-        android:layout_width="183dp"
-        android:layout_height="48dp"
+        style="@style/text"
         android:fontFamily="@font/aladin2"
         android:gravity="center"
         android:text="Descuento"
@@ -22,8 +21,7 @@
 
     <TextView
         android:id="@+id/tvDisp"
-        android:layout_width="183dp"
-        android:layout_height="48dp"
+        style="@style/text"
         android:fontFamily="@font/aladin2"
         android:gravity="center"
         android:text="Disponibilidad"
@@ -34,8 +32,7 @@
 
     <TextView
         android:id="@+id/lblDescuento4"
-        android:layout_width="183dp"
-        android:layout_height="48dp"
+        style="@style/text"
         android:layout_marginTop="15dp"
         android:fontFamily="@font/aladin2"
         android:gravity="center"
@@ -49,8 +46,7 @@
 
     <TextView
         android:id="@+id/lblAvailable4"
-        android:layout_width="183dp"
-        android:layout_height="48dp"
+        style="@style/text"
         android:layout_marginTop="15dp"
         android:fontFamily="@font/aladin2"
         android:gravity="center"
@@ -64,8 +60,7 @@
 
     <TextView
         android:id="@+id/tvName"
-        android:layout_width="183dp"
-        android:layout_height="48dp"
+        style="@style/text"
         android:layout_marginStart="24dp"
         android:fontFamily="@font/aladin2"
         android:gravity="center"
@@ -77,8 +72,7 @@
 
     <TextView
         android:id="@+id/tvDesc"
-        android:layout_width="183dp"
-        android:layout_height="48dp"
+        style="@style/text"
         android:fontFamily="@font/aladin2"
         android:gravity="center"
         android:text="Descripción"
@@ -89,8 +83,7 @@
 
     <TextView
         android:id="@+id/lblPrice"
-        android:layout_width="183dp"
-        android:layout_height="48dp"
+        style="@style/text"
         android:layout_marginTop="15dp"
         android:fontFamily="@font/aladin2"
         android:gravity="center"
@@ -104,8 +97,7 @@
 
     <TextView
         android:id="@+id/lblCategory"
-        android:layout_width="183dp"
-        android:layout_height="48dp"
+        style="@style/text"
         android:layout_marginTop="15dp"
         android:fontFamily="@font/aladin2"
         android:gravity="center"
@@ -119,8 +111,7 @@
 
     <TextView
         android:id="@+id/tvPrice"
-        android:layout_width="183dp"
-        android:layout_height="48dp"
+        style="@style/text"
         android:fontFamily="@font/aladin2"
         android:gravity="center"
         android:text="Precio"
@@ -131,8 +122,7 @@
 
     <TextView
         android:id="@+id/tvStock"
-        android:layout_width="183dp"
-        android:layout_height="48dp"
+        style="@style/text"
         android:fontFamily="@font/aladin2"
         android:gravity="center"
         android:text="Stock"
@@ -143,8 +133,7 @@
 
     <TextView
         android:id="@+id/lblName"
-        android:layout_width="183dp"
-        android:layout_height="48dp"
+        style="@style/text"
         android:layout_marginStart="16dp"
         android:layout_marginTop="15dp"
         android:fontFamily="@font/aladin2"
@@ -159,8 +148,7 @@
 
     <TextView
         android:id="@+id/lblDesc"
-        android:layout_width="183dp"
-        android:layout_height="48dp"
+        style="@style/text"
         android:layout_marginTop="15dp"
         android:fontFamily="@font/aladin2"
         android:gravity="center"

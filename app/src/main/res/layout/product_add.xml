@@ -9,8 +9,7 @@
 
     <TextView
         android:id="@+id/lblName"
-        android:layout_width="183dp"
-        android:layout_height="48dp"
+        style="@style/text"
         android:layout_marginStart="15dp"
         android:layout_marginTop="28dp"
         android:fontFamily="@font/aladin"
@@ -25,8 +24,7 @@
 
     <TextView
         android:id="@+id/lblDesc"
-        android:layout_width="183dp"
-        android:layout_height="48dp"
+        style="@style/text"
         android:layout_marginTop="15dp"
         android:fontFamily="@font/aladin"
         android:gravity="center"
@@ -40,8 +38,7 @@
 
     <TextView
         android:id="@+id/lblCategory"
-        android:layout_width="183dp"
-        android:layout_height="48dp"
+        style="@style/text"
         android:layout_marginTop="15dp"
         android:fontFamily="@font/aladin"
         android:gravity="center"
@@ -55,8 +52,7 @@
 
     <TextView
         android:id="@+id/lblPrice"
-        android:layout_width="183dp"
-        android:layout_height="48dp"
+        style="@style/text"
         android:layout_marginTop="15dp"
         android:fontFamily="@font/aladin"
         android:gravity="center"
@@ -70,8 +66,7 @@
 
     <TextView
         android:id="@+id/lblDescuento"
-        android:layout_width="183dp"
-        android:layout_height="48dp"
+        style="@style/text"
         android:layout_marginTop="15dp"
         android:fontFamily="@font/aladin"
         android:gravity="center"
@@ -85,8 +80,7 @@
 
     <TextView
         android:id="@+id/lblAvailable"
-        android:layout_width="183dp"
-        android:layout_height="48dp"
+        style="@style/text"
         android:layout_marginTop="15dp"
         android:fontFamily="@font/aladin"
         android:gravity="center"
@@ -100,8 +94,7 @@
 
     <TextView
         android:id="@+id/lblimage"
-        android:layout_width="183dp"
-        android:layout_height="48dp"
+        style="@style/text"
         android:layout_marginTop="15dp"
         android:fontFamily="@font/aladin"
         android:gravity="center"
@@ -141,8 +134,7 @@
 
     <EditText
         android:id="@+id/etName"
-        android:layout_width="183dp"
-        android:layout_height="48dp"
+        style="@style/text"
         android:layout_marginStart="24dp"
         android:ems="10"
         android:fontFamily="@font/aladin"
@@ -156,8 +148,7 @@
 
     <EditText
         android:id="@+id/etDesc"
-        android:layout_width="183dp"
-        android:layout_height="48dp"
+        style="@style/text"
         android:ems="10"
         android:fontFamily="@font/aladin"
         android:hint="blablablablabla"
@@ -170,8 +161,7 @@
 
     <EditText
         android:id="@+id/etStock"
-        android:layout_width="183dp"
-        android:layout_height="48dp"
+        style="@style/text"
         android:ems="10"
         android:fontFamily="@font/aladin"
         android:hint="ej: 6"
@@ -184,8 +174,7 @@
 
     <EditText
         android:id="@+id/etPrice"
-        android:layout_width="183dp"
-        android:layout_height="48dp"
+        style="@style/text"
         android:ems="10"
         android:fontFamily="@font/aladin"
         android:hint="ej: 1.50"
@@ -198,8 +187,6 @@
 
     <EditText
         android:id="@+id/etDescuento"
-        android:layout_width="183dp"
-        android:layout_height="48dp"
         android:ems="10"
         android:fontFamily="@font/aladin"
         android:hint="ej: 1.50"
@@ -208,12 +195,12 @@
         android:textColor="@color/white"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="@+id/etPrice"
-        app:layout_constraintTop_toTopOf="@+id/lblDescuento" />
+        app:layout_constraintTop_toTopOf="@+id/lblDescuento"
+        style="@style/text" />
 
     <EditText
         android:id="@+id/etavailable"
-        android:layout_width="183dp"
-        android:layout_height="48dp"
+        style="@style/text"
         android:ems="10"
         android:fontFamily="@font/aladin"
         android:hint="true/false"
@@ -226,8 +213,7 @@
 
     <EditText
         android:id="@+id/etimage"
-        android:layout_width="183dp"
-        android:layout_height="48dp"
+        style="@style/text"
         android:ems="10"
         android:fontFamily="@font/aladin"
         android:hint="http//hello..."

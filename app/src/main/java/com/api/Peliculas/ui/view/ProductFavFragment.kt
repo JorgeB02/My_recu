@@ -60,7 +60,7 @@ class ProductFavFragment : Fragment() {
             imageView3.setImageResource(R.drawable.circulorojo)
 
         } else {
-            binding.lblAviso.text = "Pulsa para eliminar"
+            binding.lblAviso.text = "Pulse en cualquier elemento para eliminarlo"
             imageView3.setImageResource(R.drawable.circuloverde)
         }
     }
