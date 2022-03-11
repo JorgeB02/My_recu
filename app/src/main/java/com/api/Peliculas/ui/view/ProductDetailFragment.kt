@@ -89,9 +89,9 @@ class ProductDetailFragment : Fragment() {
                     if (response.isSuccessful) {
                         Toast.makeText(context, "Elemento Eliminado", Toast.LENGTH_SHORT).show()
                         Log.e("Network", "Eliminacion Completa")
-                        val hacedor = ProductDetailFragmentDirections.actionProductDetailFragmentToProductListFragment()
+                        val generador = ProductDetailFragmentDirections.actionProductDetailFragmentToProductListFragment()
 
-                        findNavController().navigate(hacedor)
+                        findNavController().navigate(generador)
 
                     } else {
                         Log.e("Network", "error en la conexion on Response")
@@ -106,8 +106,8 @@ class ProductDetailFragment : Fragment() {
 
 
         binding.btnBack.setOnClickListener {
-            val hacedor = ProductDetailFragmentDirections.actionProductDetailFragmentToProductListFragment()
-            findNavController().navigate(hacedor)
+            val generador = ProductDetailFragmentDirections.actionProductDetailFragmentToProductListFragment()
+            findNavController().navigate(generador)
         }
 
     }

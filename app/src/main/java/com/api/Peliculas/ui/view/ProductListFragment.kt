@@ -35,7 +35,7 @@ class ProductListFragment : Fragment() {
         val parametroBusqueda = MutableLiveData<String>()
 
 
-        val hacedor =
+        val generador =
             ProductListFragmentDirections.actionProductListFragmentToProductDetailFragment(
                 it.stock.toString(),
                 it.description,
@@ -48,7 +48,7 @@ class ProductListFragment : Fragment() {
 
 
             )
-        findNavController().navigate(hacedor)
+        findNavController().navigate(generador)
 
     }
 
@@ -72,10 +72,10 @@ class ProductListFragment : Fragment() {
         binding.rvProduct.layoutManager = GridLayoutManager(context, 2)
         binding.rvProduct.adapter = adapter
         binding.btnAdd.setOnClickListener {
-            val hacedor =
+            val generador =
                 ProductListFragmentDirections.actionProductListFragmentToProductAddFragment(
                 )
-            findNavController().navigate(hacedor)
+            findNavController().navigate(generador)
         }
         requestData()
 
@@ -138,7 +138,7 @@ class ProductListFragment : Fragment() {
 
 }
 
-private fun NavController.navigate(hacedor: Unit) {
+private fun NavController.navigate(generador: Unit) {
 
 }
 
