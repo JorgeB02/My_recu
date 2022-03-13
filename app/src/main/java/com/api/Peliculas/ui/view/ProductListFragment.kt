@@ -8,12 +8,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.liveData
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.api.Peliculas.data.model.ProductObjectItem
 import com.api.Peliculas.core.NetworkManager
+import com.api.Peliculas.data.network.ProductEndpoints
 import com.api.Peliculas.databinding.ProductListBinding
 import retrofit2.Call
 import retrofit2.Callback
@@ -31,9 +34,15 @@ class ProductListFragment : Fragment() {
         get() = _binding!!
 
 
+    val count: Int = 0
+
     private val adapter = ProductAdapter {
         val parametroBusqueda = MutableLiveData<String>()
 
+   //     val user: LiveData<ProductObjectItem> = liveData {
+   //         val data = ProductEndpoints.getProducts() // loadUser is a suspend function.
+   //         emit(data)
+   //     }
 
         val generador =
             ProductListFragmentDirections.actionProductListFragmentToProductDetailFragment(
