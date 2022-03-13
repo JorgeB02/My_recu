@@ -7,13 +7,23 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.viewbinding.BuildConfig
 import com.api.Peliculas.core.NetworkManager
+
 import com.api.Peliculas.data.model.ProductObjectItem
 import com.api.Peliculas.data.model.ProductObjectRequest
+import com.api.Peliculas.databinding.ActivityMainBinding.inflate
+import com.api.Peliculas.databinding.FavProductBinding.inflate
+import com.api.Peliculas.databinding.FragmentProductModifyBinding.inflate
 import com.api.Peliculas.databinding.ProductAddBinding
+import com.api.Peliculas.databinding.ProductAddBinding.inflate
+import com.api.Peliculas.databinding.ProductDetailBinding.inflate
+import com.api.Peliculas.databinding.ProductItemBinding.inflate
+import com.api.Peliculas.databinding.ProductItemFavBinding.inflate
+import com.api.Peliculas.databinding.ProductListBinding.inflate
 import kotlinx.android.synthetic.main.product_add.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -23,22 +33,20 @@ import retrofit2.Callback
 import retrofit2.Response
 
 
-class ProductAddFragment : Fragment() {
+class ProductAddStateController : Fragment() {
     private var _binding: ProductAddBinding? = null
     private val binding
         get() = _binding!!
-
-
-    val isLoading: Boolean = false
-    val loginSuccess: Boolean = false
-    val isError: Boolean = false
-    val errorMessage: String? = null
-    val repositories: List<ProductObjectItem>? = null
 
     var ValorIntStock: Int = 0
     var ValorIntPrice: Float = 0.00F
     var ValorIntPriceD: Float = 0.00F
     var ValorBool: Boolean = true
+
+    private val viewModel: ProductAddFragment
+        get() {
+            TODO()
+        }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -53,6 +61,9 @@ class ProductAddFragment : Fragment() {
         viewLifecycleOwner.lifecycleScope.launch(Dispatchers.IO) {
 
         }
+        if (BuildConfig.DEBUG) {
+
+        }
         binding.btnAgregar.setOnClickListener {
 
             getNumericValuePrice()
@@ -60,13 +71,13 @@ class ProductAddFragment : Fragment() {
             getNumericValueStock()
             getBooleanValueAv()
 
-            val name = etName.text.toString();
-            val desc = etDesc.text.toString();
+            val name  = etName.text.toString();
+            val desc  = etDesc.text.toString();
             val stock = ValorIntStock;
-            val price = ValorIntPrice;
-            val priceD = ValorIntPriceD;
-            val avai = ValorBool;
-            val ima = etimage.text.toString()
+            val price  = ValorIntPrice;
+            val priceD  = ValorIntPriceD;
+            val avai  = ValorBool;
+            val ima  = etimage.text.toString()
 
 
 
@@ -84,14 +95,78 @@ class ProductAddFragment : Fragment() {
         }
     }
 
+    private fun navigateToHome() {
+        showError("Navigate To Home")
+    }
+
+    private fun showLoading() {
+        binding.progressBar2.visibility = View.VISIBLE
+    }
+
+    private fun showError(message: String?) {
+        Toast.makeText(requireContext(), message ?: "Unkown error", Toast.LENGTH_SHORT).show()
+    }
+
+    private fun hideLoading() {
+        binding.progressBar2.visibility = View.GONE
+    }
+
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+
+    private fun renderUiState(state: LoginUiState) {
+        if (state.isLoading) {
+            showLoading()
+        } else {
+            hideLoading()
+        }
+
+        if (state.isError) {
+            showError(state.errorMessage)
+        }
+
+        if (state.loginSuccess) {
+            navigateToHome()
+        }
+
+        if (state.repositories != null) {
+            Log.d("UDF", "repo: ${state.repositories}")
+            showError("Repositories")
+        }
+    }
+
+    private fun getBooleanValueAv() {
+        val sacarBool: String = etavailable.text.toString()
+        ValorBool = sacarBool.toBoolean()
+    }
+
+    private fun getNumericValueStock() {
+        val sacarIntStock: String = etStock.text.toString()
+        ValorIntStock = sacarIntStock.toInt()
+    }
+
+    fun getNumericValuePrice() {
+        val sacarIntPrice: String = etPrice.getText().toString()
+        ValorIntPrice = sacarIntPrice.toFloat()
+    }
+
+    fun getNumericValuePriceD() {
+        val sacarIntPriceD: String = etDescuento.getText().toString()
+        ValorIntPriceD = sacarIntPriceD.toFloat()
+    }
+
+
     fun postProduct(
-        name: String,
-        desc: String,
-        stock: Int,
-        price: Float,
+        name  : String,
+        desc  : String,
+        stock : Int,
+        price : Float,
         priceD: Float,
-        avai: Boolean,
-        ima: String
+        avai  : Boolean,
+        ima   : String
     ) {
         NetworkManager.service.savePost(
             ProductObjectRequest(
@@ -128,70 +203,12 @@ class ProductAddFragment : Fragment() {
         })
     }
 
-    private fun navigateToHome() {
-        showError("Navigate To Home")
-    }
-
-    private fun showLoading() {
-        binding.progressBar2.visibility = View.VISIBLE
-    }
-
-    private fun showError(message: String?) {
-        Toast.makeText(requireContext(), message ?: "Unkown error", Toast.LENGTH_SHORT).show()
-    }
-
-    private fun hideLoading() {
-        binding.progressBar2.visibility = View.GONE
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
-
-    private fun renderUiState(state: LoginUiState) {
-        if (state.isLoading) {
-            showLoading()
-        } else {
-            hideLoading()
-        }
-
-        if (state.isError) {
-            showError(state.errorMessage)
-        }
-
-        if (state.loginSuccess) {
-            navigateToHome()
-        }
-
-        if (state.repositories != null) {
-            Log.d("UDF", "repo: ${state.repositories}")
-            showError("Repositories")
-        }
-    }
-
-
-    private fun getBooleanValueAv() {
-        val sacarBool: String = etavailable.text.toString()
-        ValorBool = sacarBool.toBoolean()
-    }
-
-    private fun getNumericValueStock() {
-        val sacarIntStock: String = etStock.text.toString()
-        ValorIntStock = sacarIntStock.toInt()
-    }
-
-    fun getNumericValuePrice() {
-        val sacarIntPrice: String = etPrice.getText().toString()
-        ValorIntPrice = sacarIntPrice.toFloat()
-    }
-
-    fun getNumericValuePriceD() {
-        val sacarIntPriceD: String = etDescuento.getText().toString()
-        ValorIntPriceD = sacarIntPriceD.toFloat()
-
-
-    }
 }
 
-
+data class LoginUiState(
+    val isLoading: Boolean = false,
+    val loginSuccess: Boolean = false,
+    val isError: Boolean = false,
+    val errorMessage: String? = null,
+    val repositories: List<ProductObjectItem>? = null
+)
